@@ -9,7 +9,7 @@
         </v-flex>
         <v-flex shrink pa-1>
             <v-card flat>
-                <v-btn icon>
+                <v-btn icon @click="removeAttribute">
                 <v-icon>remove</v-icon>
                 </v-btn>
             </v-card>
