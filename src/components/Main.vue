@@ -5,7 +5,6 @@
                 <v-btn icon @click="addEntity">
                 <v-icon>add</v-icon>
                 </v-btn>
-                <v-toolbar-title>Graphic Editor</v-toolbar-title>
             </v-toolbar>
 
             <v-container fluid grid-list-lg>

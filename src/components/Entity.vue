@@ -3,7 +3,7 @@
     <v-card>                    
         <v-toolbar flat>
             <v-toolbar-title v-if="!editingName" @click="editingName=true">{{name}}</v-toolbar-title>
-            <v-text-field v-if="editingName" @blur="editingName=false" v-model="name"></v-text-field>
+            <v-text-field v-if="editingName" @blur="editingName=false" v-model="name" :autofocus="true"></v-text-field>
             <v-spacer></v-spacer>
             <v-btn icon @click="removeEntity">
             <v-icon>remove</v-icon>
