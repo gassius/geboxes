@@ -2,7 +2,8 @@
     <v-flex xs4>
     <v-card>                    
         <v-toolbar flat>
-            <v-toolbar-title>{{name}}</v-toolbar-title>
+            <v-toolbar-title v-if="!editingName" @click="editingName=true">{{name}}</v-toolbar-title>
+            <v-text-field v-if="editingName" @blur="editingName=false" v-model="name"></v-text-field>
             <v-spacer></v-spacer>
             <v-btn icon @click="removeEntity">
             <v-icon>remove</v-icon>
@@ -33,6 +34,7 @@ export default {
     },
     data(){
         return {
+            editingName: false,
             name: 'Entity',
             attributesCount: 0,
             attributes: []       
